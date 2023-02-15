@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Recipe from '../config/Recipes';
+import Recipe from '../components/Recipes';
 
 
 const Recipes_API = () => {
@@ -47,7 +47,9 @@ const Recipes_API = () => {
         calories={recipe.recipe.calories} 
         image={recipe.recipe.image} 
         ingredients={recipe.recipe.ingredients}
+        saturatedFats={recipe.recipe.totalNutrients.FASAT.quantity}        
         />
+     
       ))}
       </div>
     </div>
@@ -55,3 +57,4 @@ const Recipes_API = () => {
 }
 
 export default Recipes_API;
+

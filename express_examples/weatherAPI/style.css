@@ -37,9 +37,9 @@ body {
 
 .icon-container {
   position: relative;
-  top: 70px;
+  top: 80px;
   padding: 20px;
-  background-color: #222;
+  background-color: rgb(87, 174, 255);
   border-radius: 50%;
 }
 

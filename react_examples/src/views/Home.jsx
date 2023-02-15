@@ -1,5 +1,5 @@
 import '../App.css'
-import Recipes_API from '../components/Recipes_API';
+import Recipes_API from './recipesAPI';
 
 const Home = () => {
     return (

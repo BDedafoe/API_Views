@@ -1,17 +1,8 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -24,17 +15,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3 {
+  color: salmon;
 }
 
 .recipe{
@@ -49,9 +31,7 @@
   min-width: 20vh;
   color: whitesmoke;
   text-shadow: 2px 2px 2px black;
-  font-size: 18px;
-  font-family: copperplate;  
-      
+  font-size: 18px; 
 }
 
 .image{
@@ -85,4 +65,38 @@
 }
 .search-button:hover {
   background-color: lightsalmon ;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 24px;
+  list-style-type: none;
+  font-size: 1.6em;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  
+}
+
+a {
+  margin-right: 150px;
+  align-items: center;
+}
+
+.score{
+  border-radius: 10px;
+  box-shadow: 10px 10px 25px #1b1a1a;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #282c34;
+  align-items: center;
+  min-width: 20vh;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px black;
+  font-size: 18px; 
 }

@@ -36,4 +36,6 @@ function setWeatherData(data, place) {
   tempElement.textContent = data.temp
   feelslikeElement.textContent = data.feels_like
   descriptionElement.textContent = data.weather[0].description
+  document.getElementById("icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+  
 } 
