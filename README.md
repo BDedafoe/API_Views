@@ -24,11 +24,11 @@ To run this project, install it locally using npm:
 
 ```
 $ cd root directory
+$ cd expressExamples  //to use node/express templates
 $ npm install
 $ npm start
-$ cd expressExamples  //to use node/express templates
-$ npm start
 $ cd reactExamples  //to use React templates
+$ npm install
 $ npm start
 
 ```
