@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="style.css" rel="stylesheet">
+    <script defer type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV3786abyoF5giDtUoxjT9f7MUZCLXJyo&libraries=places&callback=Function.prototype"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Weather API</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+        <div class="icon-container">
+          <canvas id="icon" width="80" height="80"></canvas>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="general-information">
+          <div class="location" data-location>Weather</div>
+        </div>
+       
+
+        <div class="detail-section">
+          <div class="detail">
+              <div class="title">Current Temp</div>
+            <div class="value" data-temp>TBD</div>
+          </div>
+          <div class="detail">
+            <div class="title">Feels Like</div>
+          <div class="value" data-feels_like>TBD</div>
+        </div>
+          <div class="detail">
+            <div class="title">Description</div>
+            <div class="value" data-weather-description>TBD</div>
+          </div>
+        </div>
+
+        <div class="city-search-container">
+          <input type="text" class="city-search" data-city-search placeholder="Enter Location">
+        </div>
+      </div>
+    </div>
+    
+  </body>
+
+  </html>
