@@ -6,7 +6,7 @@
 * [Setup](#setup)
 
 ## General info
-Express and React templates for fetching and rendering API data. This library will be updated with any new APIs that interest me.  
+Express and React templates for fetching and rendering API data. This library will be updated with any new APIs that interest me 🤓
 	
 ## Technologies
 Project is created with:
