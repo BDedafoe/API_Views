@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "API Views",
   "main": "server.js",
+  "proxy": "http://localhost:3004/",
   "scripts": {
     "start": "cross-env NODE_ENV=production node server",
     "dev": "cross-env NODE_ENV=development nodemon server",

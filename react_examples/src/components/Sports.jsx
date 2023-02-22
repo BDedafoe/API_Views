@@ -4,7 +4,7 @@ import style from '../App.css';
 const getScores = ({title,scores,sport_key}) =>{
     
     return(
-        <div className={style.score}>
+        <div className={style.scores}>
             <h1>{title}</h1>
             <ol>
                 {sport_key.map(sport_key => ( 
