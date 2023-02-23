@@ -1,7 +1,7 @@
 import React from "react";
 import style from '../App.css';
   
-const getRecipe = ({title,calories,image,ingredients, saturatedFats}) =>{
+const Recipe = ({title,calories,image,ingredients}) =>{
     
     return(
         <div className={style.recipe}>
@@ -12,9 +12,8 @@ const getRecipe = ({title,calories,image,ingredients, saturatedFats}) =>{
                 ))}
             </ol>
                 <p>Calories : {calories}</p>
-                <h2>Saturated Fats: {saturatedFats}</h2>
             <img className={style.image} src={image} alt=""/>
         </div>
     );
 }
-export default getRecipe;
+export default Recipe;

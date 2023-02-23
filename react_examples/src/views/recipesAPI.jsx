@@ -46,8 +46,7 @@ const Recipes_API = () => {
         title={recipe.recipe.label} 
         calories={recipe.recipe.calories} 
         image={recipe.recipe.image} 
-        ingredients={recipe.recipe.ingredients}
-        saturatedFats={recipe.recipe.totalNutrients.FASAT.quantity}        
+        ingredients={recipe.recipe.ingredients}    
         />
      
       ))}

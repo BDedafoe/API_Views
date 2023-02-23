@@ -166,8 +166,13 @@ img.w-icon {
 @media only screen and  (max-width:730px){
     
     .container{
-        margin: 0;
         padding: 20px;
+      
+    }
+
+    #current-temp.today {
+        justify-content: start;
+        align-items: none;
     }
     
     .future-forecast{
@@ -192,9 +197,7 @@ img.w-icon {
         font-size: 20px;
     }
 
-    .current-info .others{
-        padding: 12px;
-    }
+    
 
     .current-info .others .weather-item{
         font-size: 16px;
@@ -231,7 +234,6 @@ img.w-icon {
 
 
   .pac-container {
-    
     background: rgba(24,24,27, 0.6);
     padding:15px;
     border-radius: 10px;

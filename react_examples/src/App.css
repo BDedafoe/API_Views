@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #282c34;
+  color: white;
 }
 
 
@@ -86,17 +87,3 @@ a {
   align-items: center;
 }
 
-.score{
-  border-radius: 10px;
-  box-shadow: 10px 10px 25px #1b1a1a;
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #282c34;
-  align-items: center;
-  min-width: 20vh;
-  color: whitesmoke;
-  text-shadow: 2px 2px 2px black;
-  font-size: 18px; 
-}

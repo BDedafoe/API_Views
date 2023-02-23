@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom';
 import Home from './views/Home';
 import Recipes_API from './views/recipesAPI';
-import Sports_API from './views/sportsAPI';
+import Drinks_API from './views/drinksAPI'
 
 function App() {
   return (
@@ -28,20 +28,20 @@ function App() {
             Recipes API
           </NavLink>
           <NavLink
-            to="/sports"
+            to="/drinks"
             style={({ isActive }) => ({
               color: isActive ? 'aqua' : '#545e6f',
               textDecoration: 'none'
             })}
           >
-            Sports API
+            Drinks API
           </NavLink>
      
         </div>
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/recipes' element={<Recipes_API/>} />
-            <Route path='/sports' element={<Sports_API/>} />
+            <Route path='/drinks' element={<Drinks_API/>} />
 
           </Routes>
         </Router>
