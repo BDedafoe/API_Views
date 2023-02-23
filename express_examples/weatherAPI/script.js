@@ -79,10 +79,8 @@ function showWeatherData (data){
 
     let {temp, wind_gust, sunrise, sunset, wind_speed} = data.current;
     
-     
     currentWeatherItemsEl.innerHTML = 
-    `
-    <div class="weather-item">
+    `<div class="weather-item">
         <div>High</div>
         <div class="temp">${parseFloat(data.daily[0].temp.max.toFixed(0))} °F</div>
     </div>
@@ -116,28 +114,22 @@ function showWeatherData (data){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
         <div class="others">
-        
         <div class="weather-item">
-            <div>Current Temp</div>
-            <div>${parseFloat(temp.toFixed(0))} °F</div>     
-        </div>
+                <div>Current Temp</div>
+                <div class="temp"> ${parseFloat(temp.toFixed(0))} °F</div>
+            </div>
         <div class="weather-item">
             <div>Feels Like</div>
             <div class="temp">${parseFloat(data.current.feels_like.toFixed(0))} °F</div>
         </div>
             <div class="weather-item">
                 <div>Humidity</div>
-                <div>${data.current.humidity}%</div>
+                <div class="temp">${data.current.humidity}%</div>
             </div>
             <div class="weather-item">
-                <div>Description </div>
-                <div> ${data.current.weather[0].description}</div>
-            </div>
-            <div class="weather-item">
-                <div>Clouds</div>
-                <div>${data.daily[0].clouds}%</div>
-            </div>
-
+            <div style="paddingRight:20px">Description </div>
+            <div class="temp">${data.current.weather[0].description.charAt(0).toUpperCase() + data.current.weather[0].description.slice(1)}</div> 
+        </div>
             </div>
             `
         } else {
@@ -147,7 +139,7 @@ function showWeatherData (data){
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">High - ${parseFloat(day.temp.max.toFixed(0))} °F</div>
                 <div class="temp">Low - ${parseFloat(day.temp.min.toFixed(0))} °F</div>
-                <div class="temp">POP - ${day.pop}%</div>
+                <div class="temp">POP - ${day.pop * 100}%</div>
             </div>
           
             `
@@ -160,3 +152,4 @@ function showWeatherData (data){
 
 
 
+  
