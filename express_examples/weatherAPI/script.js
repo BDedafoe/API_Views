@@ -75,37 +75,39 @@ function getWeatherData () {
         })
 }
 
-function showWeatherData (data, place){
-    locationEl.textContent = place          //Google API provided location 
-    let {temp, humidity, pressure, sunrise, sunset, wind_speed} = data.current;
+function showWeatherData (data){
+
+    let {temp, wind_gust, sunrise, sunset, wind_speed} = data.current;
+    
      
     currentWeatherItemsEl.innerHTML = 
-    `<div class="weather-item">
-        <div>Current Temp</div>
-        <div>${temp} °F</div>
-    </div
+    `
     <div class="weather-item">
-        <div>Humidity</div>
-        <div>${humidity}%</div>
+        <div>High</div>
+        <div class="temp">${parseFloat(data.daily[0].temp.max.toFixed(0))} °F</div>
     </div>
     <div class="weather-item">
-        <div>Pressure</div>
-        <div>${pressure}</div>
+        <div>Low</div>
+        <div class="temp">${parseFloat(data.daily[0].temp.min.toFixed(0))} °F</div>
+    </div>
+    <div class="weather-item">
+        <div>Wind Gust</div>
+        <div>${wind_gust} m/s</div>
     </div>
     <div class="weather-item">
         <div>Wind Speed</div>
-        <div>${wind_speed}mph</div>
+        <div>${wind_speed} m/s</div>
     </div>
     <div class="weather-item">
         <div>Sunrise</div>
-        <div>${window.moment(sunrise * 1000).format('HH:mm a')}
+        <div>${window.moment(sunrise * 1000).format('HH:mm a')}</div>
     </div>
     <div class="weather-item">
         <div>Sunset</div>
-        <div>${window.moment(sunset*1000).format('HH:mm a')}</div>
+        <div>${window.moment(sunset * 1000).format('HH:mm a')}</div>
     </div>
     
-    
+
     `;
 
     let otherDayForcast = ''
@@ -113,22 +115,41 @@ function showWeatherData (data, place){
         if(idx == 0){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
-            <div class="other">
-                <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
-                <div class="temp">Night - ${day.temp.night} °F</div>
-                <div class="temp">Day - ${day.temp.day} °F</div>
+        <div class="others">
+        
+        <div class="weather-item">
+            <div>Current Temp</div>
+            <div>${parseFloat(temp.toFixed(0))} °F</div>     
+        </div>
+        <div class="weather-item">
+            <div>Feels Like</div>
+            <div class="temp">${parseFloat(data.current.feels_like.toFixed(0))} °F</div>
+        </div>
+            <div class="weather-item">
+                <div>Humidity</div>
+                <div>${data.current.humidity}%</div>
+            </div>
+            <div class="weather-item">
+                <div>Description </div>
+                <div> ${data.current.weather[0].description}</div>
+            </div>
+            <div class="weather-item">
+                <div>Clouds</div>
+                <div>${data.daily[0].clouds}%</div>
             </div>
 
+            </div>
             `
         } else {
             otherDayForcast += `
             <div class="weather-forecast-item">
                 <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - ${day.temp.night} °F</div>
-                <div class="temp">Day - ${day.temp.day} °F</div>
+                <div class="temp">High - ${parseFloat(day.temp.max.toFixed(0))} °F</div>
+                <div class="temp">Low - ${parseFloat(day.temp.min.toFixed(0))} °F</div>
+                <div class="temp">POP - ${day.pop}%</div>
             </div>
-            
+          
             `
         }
     })
