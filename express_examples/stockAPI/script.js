@@ -10,7 +10,7 @@ setInterval(() => {
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    timeElement.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
+   
 
     dateElement.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
     
@@ -55,9 +55,9 @@ function getStockData () {
 function showStockData (data) {
 
     adsmiItemElement.innerHTML =     
-    `<div class="info">
-        <div>${data.result["ADSMI:IND"].name}</div>
-    </div>
+    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">${data.result["ADSMI:IND"].name}</div>
+            <div class="card-body">
     <div class="info">
         <div>Open</div>
         <div>${data.result["ADSMI:IND"].open}</div>
@@ -78,13 +78,14 @@ function showStockData (data) {
         <div>PCT Change</div>
         <div>${data.result["ADSMI:IND"].pctChange}%</div>
     </div>
+    </div>
 
     `;
 
     aexItemElement.innerHTML =     
-    `<div class="info">
-        <div>${data.result["AEX:IND"].name}</div>
-    </div>
+    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">${data.result["AEX:IND"].name}</div>
+            <div class="card-body">
     <div class="info">
         <div>Open</div>
         <div>${data.result["AEX:IND"].open}</div>
@@ -105,13 +106,14 @@ function showStockData (data) {
         <div>PCT Change</div>
         <div>${data.result["AEX:IND"].pctChange}%</div>
     </div>
+    </div>
 
     `;
 
     co1ItemElement.innerHTML =     
-    `<div class="info">
-        <div>${data.result["CO1:COM"].symbol}</div>
-    </div>
+    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">${data.result["CO1:COM"].symbol}</div>
+            <div class="card-body">
     <div class="info">
         <div>Last</div>
         <div>${data.result["CO1:COM"].last}</div>
@@ -132,13 +134,13 @@ function showStockData (data) {
         <div>PCT Change</div>
         <div>${data.result["CO1:COM"].pctChange}%</div>
     </div>
-
+    </div>
     `;
     
     gc1ItemElement.innerHTML =     
-    `<div class="info">
-        <div>${data.result["GC1:COM"].symbol}</div>
-    </div>
+    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="card-header">${data.result["GC1:COM"].symbol}</div>
+            <div class="card-body">
     <div class="info">
         <div>Last</div>
         <div>${data.result["GC1:COM"].last}</div>
@@ -158,6 +160,7 @@ function showStockData (data) {
     <div class="info">
         <div>PCT Change</div>
         <div>${data.result["GC1:COM"].pctChange}%</div>
+    </div>
     </div>
 
     `;
