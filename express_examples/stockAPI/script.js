@@ -76,7 +76,7 @@ function showStockData (data) {
     </div>
     <div class="info">
         <div>PCT Change</div>
-        <div>${data.result["ADSMI:IND"].pctChange * 100}%</div>
+        <div>${data.result["ADSMI:IND"].pctChange}%</div>
     </div>
 
     `;
@@ -103,7 +103,7 @@ function showStockData (data) {
     </div>
     <div class="info">
         <div>PCT Change</div>
-        <div>${data.result["AEX:IND"].pctChange * 100}%</div>
+        <div>${data.result["AEX:IND"].pctChange}%</div>
     </div>
 
     `;
@@ -130,7 +130,7 @@ function showStockData (data) {
     </div>
     <div class="info">
         <div>PCT Change</div>
-        <div>${data.result["CO1:COM"].pctChange * 100}%</div>
+        <div>${data.result["CO1:COM"].pctChange}%</div>
     </div>
 
     `;
@@ -151,14 +151,15 @@ function showStockData (data) {
         <div>Day High</div>
         <div>${data.result["GC1:COM"].dayHigh}</div>
     </div>
-    <div class="info>
+    <div class="info">
         <div>Day Low</div>
         <div>${data.result["GC1:COM"].dayLow}</div>
     </div>
     <div class="info">
         <div>PCT Change</div>
-        <div>${data.result["GC1:COM"].pctChange * 100}%</div>
+        <div>${data.result["GC1:COM"].pctChange}%</div>
     </div>
+
     `;
    
 }
