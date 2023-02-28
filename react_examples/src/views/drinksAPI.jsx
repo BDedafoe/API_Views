@@ -30,9 +30,9 @@ const Drinks_API = () => {
 
   return (
     
-    <div className="App">
+    <div className="drinks">
       <br></br>
-        <h3>Search for drinks</h3>
+        <h3>Search for a cocktail by ingredient</h3>
         <form onSubmit={getSearch} className="search-form">
         <input className="search-bar" type="text" value={search} onChange={updateSearch}></input>
         <button className="search-button" type="submit">Search</button>
@@ -40,11 +40,9 @@ const Drinks_API = () => {
       <div className="drinks">
       {drink.map(drinks => (
         <Drink  
-       
+        key={drinks.strDrink} 
         name={drinks.strDrink} 
-        glass={drinks.strGlass} 
         image={drinks.strDrinkThumb} 
-        instructions={drinks.strInstructions}    
         />
      
       ))}
@@ -54,3 +52,4 @@ const Drinks_API = () => {
 }
 
 export default Drinks_API;
+

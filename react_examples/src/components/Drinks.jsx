@@ -1,17 +1,11 @@
 import React from "react";
-import style from '../App.css';
+import style from "../public/style.css" 
   
-const Drink = ({name,strCategory,glass,instructions,image,strIngredient1}) =>{
+const Drink = ({name, image}) =>{
     
     return(
         <div className={style.drinks}>
             <h1>{name}</h1>
-            <ol>
-                {strIngredient1}
-            </ol>
-                <p>Category : {strCategory}</p>
-                <p>Glass : {glass}</p>
-                <p>Instructions : {instructions}</p>
             <img className={style.image} src={image} alt=""/>
         </div>
     );  

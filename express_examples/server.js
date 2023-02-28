@@ -14,19 +14,27 @@ app.use(express.json())
 
 
 //weatherAPI 
-app.use(express.static('./weatherAPI'))
+app.use(express.static('./stockAPI'))
 
- app.post('/weather', (req, res) => {
-    console.log(req.body)
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${req.body.latitude}&lon=${req.body.longitude}&exclude=hourly,minutely&units=imperial&appid=${myKEY}`
-    axios({
-      url: url,
-      responseType: 'json'
-    }).then(data => res.json(data.data))
-})
+//  app.post('/weather', (req, res) => {
+//     console.log(req.body)
+//     const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${req.body.latitude}&lon=${req.body.longitude}&exclude=hourly,minutely&units=imperial&appid=${myKEY}`
+//     axios({
+//       url: url,
+//       responseType: 'json'
+//     }).then(data => res.json(data.data))
+// })
+
+// app.get('/', (req, res) => {
+//   res.render('./weatherAPI/index.html')
+// })
+
+
 
 app.get('/', (req, res) => {
-  res.render('./weatherAPI/index.html')
+res.render('./stockAPI/index.html')
 })
+
+
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
