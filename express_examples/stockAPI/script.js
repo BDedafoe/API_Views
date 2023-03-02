@@ -20,10 +20,6 @@ setInterval(() => {
 
 const timeElement = document.getElementById('time')
 const dateElement = document.getElementById('date')
-const securityTypeElement = document.querySelector('[securityType]')
-const dayHighElement = document.querySelector('[day-high]')
-const dayLowElement = document.querySelector('[day-low]')
-const pctChangeElement = document.querySelector('[pct-change')
 const gc1ItemElement = document.getElementById('gc1')
 const adsmiItemElement = document.getElementById('adsmi')
 const aexItemElement = document.getElementById('aex')
@@ -55,7 +51,7 @@ function getStockData () {
 function showStockData (data) {
 
     adsmiItemElement.innerHTML =     
-    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    `<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
         <div class="card-header">${data.result["ADSMI:IND"].name}</div>
             <div class="card-body">
     <div class="info">
@@ -83,7 +79,7 @@ function showStockData (data) {
     `;
 
     aexItemElement.innerHTML =     
-    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    `<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
         <div class="card-header">${data.result["AEX:IND"].name}</div>
             <div class="card-body">
     <div class="info">
@@ -111,7 +107,7 @@ function showStockData (data) {
     `;
 
     co1ItemElement.innerHTML =     
-    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    `<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
         <div class="card-header">${data.result["CO1:COM"].symbol}</div>
             <div class="card-body">
     <div class="info">
@@ -138,7 +134,7 @@ function showStockData (data) {
     `;
     
     gc1ItemElement.innerHTML =     
-    `<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    `<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
         <div class="card-header">${data.result["GC1:COM"].symbol}</div>
             <div class="card-body">
     <div class="info">

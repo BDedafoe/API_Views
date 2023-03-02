@@ -11,7 +11,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-
+    color: aliceblue;
 }
 
 h2 {
@@ -21,6 +21,7 @@ h2 {
 
 .container {
     padding: 20px;
+    margin: 0;
 }
 
 .results {

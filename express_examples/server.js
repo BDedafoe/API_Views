@@ -36,5 +36,13 @@ res.render('./stockAPI/index.html')
 })
 
 
+// Catch all route, renders 404 page
+app.get("*", (req, res) => {
+  res.render('404', {
+      title: "page not found"
+  })
+})
+
+
 
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
