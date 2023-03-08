@@ -2,7 +2,6 @@
     border-radius: 10px;
     box-shadow: 10px 10px 25px #1b1a1a; 
     background-color: #282c34;
-    color: whitesmoke;
     text-shadow: 2px 2px 2px black;
     font-size: 10px;
     padding: 20px;
@@ -24,7 +23,7 @@
 img {
     border-radius: 20px;
     margin: 0px 10px 10px 10px;
-    box-shadow: 5px 5px 11px #f5f2f2;
+    box-shadow: 3px 3px 5px #f5f2f2;
     width: 30vh;
 }
 
@@ -32,6 +31,7 @@ img {
 h1 {
     text-align: center;
     font-size: 30px;
+    color: aqua;
 }
 
 .instructions_container {
@@ -39,6 +39,10 @@ h1 {
     font-size: 16px;
     justify-content: center;
     max-width: 50vh;
+}
+
+.instructions_container h3 {
+    color: salmon;
 }
 
 .prepare {
@@ -51,7 +55,7 @@ h1 {
 
 .left_side {
     flex: 55%;
-
+    color: aqua;
 }
 
 .right_side {

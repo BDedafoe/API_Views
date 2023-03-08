@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom
 import Home from './views/Home';
 import Recipes_API from './views/recipesAPI';
 import Drinks_API from './views/drinksAPI'
+import TradingViewWidget from './components/TradingViewWidget';
 
 function App() {
   return (
@@ -36,13 +37,22 @@ function App() {
           >
             Drinks API
           </NavLink>
+          <NavLink
+            to="/stocks"
+            style={({ isActive }) => ({
+              color: isActive ? 'aqua' : '#545e6f',
+              textDecoration: 'none'
+            })}
+          >
+            Stocks
+          </NavLink>
      
         </div>
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/recipes' element={<Recipes_API/>} />
             <Route path='/drinks' element={<Drinks_API/>} />
-
+            <Route path='/stocks' element={<TradingViewWidget/>} />
           </Routes>
         </Router>
     </div>

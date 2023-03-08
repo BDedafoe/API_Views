@@ -89,3 +89,19 @@ a {
   align-items: center;
 }
 
+.tradingview-widget-container {
+  min-height: auto;
+  min-width: auto;
+}
+
+.tradingview-widget-container {
+   padding: 25px;
+   min-width: 100vh;
+   min-height: 100vh;
+}
+
+#technical-analysis-chart-demo {
+  padding: 25px;
+  min-width: 100vh;
+  min-height: 100vh;
+}
